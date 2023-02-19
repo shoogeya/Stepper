@@ -95,6 +95,7 @@ class StepperCollectionViewCell: UICollectionViewCell {
                 self.img.image=selected
                 self.viewContent.backgroundColor=stepper.style.selectedColor;
                 self.lblTitle.text=title;
+                self.lblTitle.isHidden = true
                 self.lblSubTitle.textColor=stepper.style.selectedSubtitleColor
 
             }, unselectedHanadler: {
