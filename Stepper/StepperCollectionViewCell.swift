@@ -95,7 +95,7 @@ class StepperCollectionViewCell: UICollectionViewCell {
                 self.img.image=selected
                 self.viewContent.backgroundColor=stepper.style.selectedColor;
                 self.lblTitle.text=title;
-                self.lblTitle.isHidden = true
+                self.lblTitle.isHidden=true;
                 self.lblSubTitle.textColor=stepper.style.selectedSubtitleColor
 
             }, unselectedHanadler: {
@@ -104,6 +104,7 @@ class StepperCollectionViewCell: UICollectionViewCell {
                 self.lblTitle.text=title;
                 self.lblTitle.textColor=stepper.style.selectedTitleColor;
                 self.lblSubTitle.textColor=stepper.style.defaultSubtitleColor
+                self.lblTitle.isHidden = false
 
             }, {
                 self.img.image=current
@@ -111,11 +112,9 @@ class StepperCollectionViewCell: UICollectionViewCell {
                 self.lblTitle.text=title;
                 self.lblTitle.textColor=stepper.style.currentTitleColor;
                 self.lblSubTitle.textColor=stepper.style.currentSubtitleColor
-
+                self.lblTitle.isHidden=false;
             })
             
-
-            self.lblTitle.isHidden=false;
             self.img.isHidden=false;
             self.viewBorderView.isHidden=true;
             self.viewRadioButton.isHidden=true;
